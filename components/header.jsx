@@ -25,12 +25,12 @@ const Header = async () => {
         {/* Navigation Links - Different for signed in/out users */}
         <div className="hidden md:flex items-center space-x-8">
           <SignedOut>
-            <a href="#features" className="text-gray-600 hover:text-blue-600">
+            <a href="#features" className="gradient-title hover:text-blue-600">
               Features
             </a>
             <a
               href="#testimonials"
-              className="text-gray-600 hover:text-blue-600"
+              className="gradient-title hover:text-blue-600"
             >
               Testimonials
             </a>
@@ -58,7 +58,7 @@ const Header = async () => {
           </SignedIn>
           <SignedOut>
             <SignInButton forceRedirectUrl="/dashboard">
-              <Button variant="outline">Login</Button>
+              <Button variant="default"  size="lg" className="gradient-less px-6 py-2 border-2 border-purple-500 rounded ">Login</Button>
             </SignInButton>
           </SignedOut>
           <SignedIn>

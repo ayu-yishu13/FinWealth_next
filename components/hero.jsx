@@ -32,7 +32,7 @@ const HeroSection = () => {
         <h1 className="text-5xl md:text-8xl lg:text-[90px] pb-6 gradient-title">
             Manage Your Finances <br /> with Intelligence
         </h1>
-        <p className="text-xl text-gray-800 mb-8 max-w-2xl mx-auto">
+        <p className="text-xl gradient-more mb-8 max-w-2xl mx-auto">
           An AI-powered financial management platform that helps you track,
           analyze, and optimize your spending with real-time insights.
         </p>
@@ -56,11 +56,12 @@ const HeroSection = () => {
         <div className="hero-image-wrapper mt-5 md:mt-0">
           <div ref={imageRef} className="hero-image">
             <Image
-              src="/banner4.jpeg"
-              width={1180}
-              height={10}
+              src="/hello.jpg"
+              width={900}
+              height={2}
               alt="Dashboard Preview"
-              className="rounded-lg shadow-2xl border mx-auto"
+              className="rounded-lg shadow-2xl border mx-auto "
+              quality={100}
               priority
             />
           </div>
