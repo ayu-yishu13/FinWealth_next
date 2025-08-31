@@ -120,7 +120,7 @@ html {
 
 @layer base {
   * {
-    @apply border-border;
+    @apply border-purple-600;
   }
   body {
     @apply bg-background text-foreground;

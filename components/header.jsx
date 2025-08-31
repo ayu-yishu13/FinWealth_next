@@ -17,7 +17,7 @@ const Header = async () => {
             src={"/images.jpeg"}
             alt="Welth Logo"
             width={200}
-            height={60}
+            height={200}
             className="h-12 w-auto object-contain"
           />
         </Link>
@@ -44,21 +44,22 @@ const Header = async () => {
               href="/dashboard"
               className="text-gray-600 hover:text-blue-600 flex items-center gap-2"
             >
-              <Button variant="outline">
+              <Button className=" outline ">
                 <LayoutDashboard size={18} />
                 <span className="hidden md:inline">Dashboard</span>
               </Button>
             </Link>
+
             <a href="/transaction/create">
-              <Button className="flex items-center gap-2">
+              <Button className="flex items-center gap-2 outline">
                 <PenBox size={18} />
-                <span className="hidden md:inline">Add Transaction</span>
+                <span className="hidden md:inline ">Add Transaction</span>
               </Button>
             </a>
           </SignedIn>
           <SignedOut>
             <SignInButton forceRedirectUrl="/dashboard">
-              <Button variant="default"  size="lg" className="gradient-less px-6 py-2 border-2 border-purple-500 rounded ">Login</Button>
+              <Button variant="default"  size="lg" className="gradient-less px-6 py-2 outline-double">Login</Button>
             </SignInButton>
           </SignedOut>
           <SignedIn>
