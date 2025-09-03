@@ -45,8 +45,17 @@ It’s not just a budgeting app — it’s a **personal wealth companion**, with
 ## Screenshots
 
 ![Screenshot 1](/preview/3.png)  
-![Screenshot 2](/preview/2.png)  
-![Screenshot 3](/preview/Screenshot%202025-09-03%20180725.png)  
+
+---
+
+![Screenshot 2](/preview/2.png) 
+
+---
+
+![Screenshot 3](/preview/Screenshot%202025-09-03%20180725.png)
+
+---
+
 ![Screenshot 4](/preview/4.png)  
 
 ---
