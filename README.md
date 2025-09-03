@@ -1,36 +1,147 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 💰 FinWealth  
 
-## Getting Started
+> A modern personal finance management app — built with **Next.js 15, Clerk, Prisma, and Arcjet** — that helps you take control of your money.  
 
-First, run the development server:
+![FinWealth Dashboard Preview](/preview/3.png)  
 
+---
+
+## ✨ What is FinWealth?
+
+FinWealth is a **next-gen financial dashboard** that lets you securely manage your accounts, track transactions, and visualize spending patterns.  
+
+It’s not just a budgeting app — it’s a **personal wealth companion**, with **bot protection, secure authentication, automated workflows, and rich analytics**.  
+
+---
+
+## 🚀 Features
+
+- 🔐 **Secure Auth** — Powered by [Clerk](https://clerk.com/) for login, signup, and session management.  
+- 🛡 **Arcjet Shield** — Middleware protection against malicious traffic and bots.  
+- 📊 **Data Visualization** — Interactive charts with [Recharts](https://recharts.org/).  
+- 📅 **Smart Transaction Management** — Add, view, and track your transactions in real-time.  
+- ✉️ **Email Notifications** — Built with [React Email](https://react.email/) for reminders and alerts.  
+- ⚡ **Edge-Ready** — Optimized with Vercel & Next.js middleware for speed.  
+- 🎨 **Modern UI/UX** — Styled with TailwindCSS + Radix UI, responsive on all devices.  
+- 🛠 **Developer-Friendly** — Prisma ORM + PostgreSQL for robust data persistence.  
+
+---
+
+## 🛠 Tech Stack
+
+| Layer | Tech |
+|-------|------|
+| Framework | **Next.js 15 (App Router, Turbopack)** |
+| Frontend | React 18 (downgraded for package compatibility), TailwindCSS, Radix UI |
+| Auth | Clerk |
+| Security | Arcjet (Shield + Bot Detection) |
+| DB | Prisma ORM + PostgreSQL (or SQLite for dev) |
+| Visualization | Recharts |
+| Workflows | Inngest |
+| Email | React Email, Resend |
+
+---
+
+## Screenshots
+
+![Screenshot 1](/preview/3.png)  
+![Screenshot 2](/preview/2.png)  
+![Screenshot 3](/preview/Screenshot%202025-09-03%20180725.png)  
+![Screenshot 4](/preview/4.png)  
+
+---
+
+## ⚡ Getting Started
+
+### 1️⃣ Clone & Install  
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/ayu-yishu13/FinWealth_next.git
+cd FinWealth_next
+
+# Use React 18 (important for Recharts)
+npm uninstall react react-dom
+npm install react@18.3.1 react-dom@18.3.1
+
+npm install
+
+
+```
+---
+
+### 2️⃣ Setup Database
+```bash 
+
+npx prisma migrate dev
+
+```
+---
+
+### 3️⃣ Environment Variables
+```bash 
+
+Create .env.local:
+
+DATABASE_URL="postgresql://..."
+ARCJET_KEY="your_arcjet_key"
+
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY="your_key"
+CLERK_SECRET_KEY="your_key"
+
+EMAIL_HOST="smtp.example.com"
+EMAIL_PORT=587
+EMAIL_USER="user@example.com"
+EMAIL_PASSWORD="password"
+EMAIL_FROM="FinWealth <no-reply@finwealth.com>"
+
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 4️⃣ Run Dev Server
+```
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+npm run dev
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Visit 👉 http://localhost:3000
 
-## Learn More
+```
 
-To learn more about Next.js, take a look at the following resources:
+## 📊 Project Structure
+FinWealth_next/
+ ┣ app/               # Next.js App Router pages
+ ┣ components/        # Reusable UI components
+ ┣ lib/               # Utils (checkUser, auth helpers)
+ ┣ prisma/            # Prisma schema & migrations
+ ┣ styles/            # Tailwind setup
+ ┣ middleware.js      # Arcjet + Clerk middleware
+ ┣ package.json
+ ┗ README.md
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
+### 🚀 Deployment
 
-## Deploy on Vercel
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+FinWealth is optimized for Vercel.
+To deploy:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+vercel --prod
+
+
+Make sure:
+
+React = 18.x
+
+All env vars are set in Vercel Dashboard
+```
+
+---
+
+### 🤝 Contributing
+
+Pull requests are welcome. Open an issue first for major changes.
+Please make sure to update tests as appropriate.
+
+📜 License
+```
+
+MIT © 2025 Ayush Kumar Rai
